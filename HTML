@@ -1,1 +1,127 @@
+</head>
+<body>
+<div id="page-transition"></div>
+<header>
+  <div class="brand"><div class="logo">EJ</div>Emmanuel Johnson</div>
+  <nav id="mainNav">
+    <a href="#home" class="active">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#showcase">Showcase</a>
+    <a href="#problem">Problem Solving</a>
+    <a href="#contact">Contact</a>
+    <button id="themeToggle" class="btn">🌓</button>
+  </nav>
+</header>
+<main id="content"></main>
+<footer>© 2025 Emmanuel Johnson.</footer>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const content=document.getElementById("content");
+  const transition=document.getElementById("page-transition");
+  const navLinks=document.querySelectorAll('#mainNav a[href^="#"]');
+
+  const pages={
+    home:`<section class="hero">
+<video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"><source src="https://videos.pexels.com/video-files/3129957/3129957-hd_1280_720_25fps.mp4" type="video/mp4"></video>
+<div class="hero-content"><h1><span class="wave">👋</span> <span class="typing-intro">Hi, my name is Emmanuel, and welcome to my page.</span></h1></div>
+</section>
+<section class="profile-bio">
+<img src="file:///C:/Users/emman/OneDrive/Escritorio/modelling/IMG_0970.jpg" alt="Profile Picture">
+<div class="bio-card">
+<h3>👨‍💼 Biography</h3>
+<p>I’m Emmanuel Johnson, a motivated and detail-oriented individual who loves blending creativity with strategy. I’ve built my skills through teamwork, leadership, and curiosity — from academic research on student mental health to professional experiences at Sports Direct and Tesco. Fluent in English, Spanish, Portuguese, and Yoruba.</p>
+<div style="margin-top:15px;">
+<a href="https://www.linkedin.com/in/emmanuel-johnson-8259b92b1" target="_blank"><button class="btn">LinkedIn</button></a>
+<a href="https://github.com/EmmanuelJJ01" target="_blank"><button class="btn">GitHub</button></a></div>
+</div>
+</section>`,
+    skills:`<h2>💼 Skills, Certificates & Experience</h2>
+<section style="margin-top:30px;">
+<h3>🧠 Core Skills</h3>
+<div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:20px;">
+<div class="progress-circle" data-percent="90"><span>Teamwork</span></div>
+<div class="progress-circle" data-percent="85"><span>Leadership</span></div>
+<div class="progress-circle" data-percent="88"><span>Communication</span></div>
+<div class="progress-circle" data-percent="80"><span>Multilingual</span></div>
+</div>
+<p style="margin-top:20px;text-align:center;color:var(--muted);">I am fluent in English, Spanish, Portuguese, and Yoruba — allowing me to collaborate effectively in multicultural teams.</p>
+</section>
+<section style="margin-top:50px;">
+<h3>💼 Work Experience</h3>
+<table class="work-table" id="workTable">
+<thead><tr><th>Company</th><th>Role</th><th>Duration</th><th>Start</th><th>End</th></tr></thead>
+<tbody>
+<tr class="work-row"><td>Sports Direct</td><td>Sales Assistant</td><td>1 year 4 months</td><td>Jan 2023</td><td>Apr 2024</td></tr>
+<tr class="work-description"><td colspan="5">Supported store operations, customer service, and sales assistance.</td></tr>
+<tr class="work-row"><td>Tesco</td><td>Customer Assistant</td><td>Current</td><td>Apr 2024</td><td>Present</td></tr>
+<tr class="work-description"><td colspan="5">Currently assisting customers, managing stock, and ensuring smooth daily operations.</td></tr>
+</tbody>
+</table>
+</section>`,
+    showcase:`<h2>🎓 My Project Showcase</h2>
+<div class="grid-showcase">
+<div class="project-card"><h3>🧠 Student Mental Health Research</h3><div class="details"><p><b>Role:</b> Research Lead<br><b>Outcome:</b> Achieved 87% grade.</p></div></div>
+<div class="project-card"><h3>📊 Business Intelligence & Dashboards</h3><div class="details"><p><b>Role:</b> BI Analyst<br><b>Outcome:</b> Improved decision efficiency.</p></div></div>
+<div class="project-card"><h3>🏙️ Market Street Downfall Analysis</h3><div class="details"><p><b>Role:</b> Field Analyst<br><b>Outcome:</b> Proposed revitalization plan.</p></div></div>
+</div>`,
+    problem:`<section><h2>🍽️ Chiquitos Digital Transformation</h2>
+<p>This case study demonstrates how my web development skills can modernize <b>Chiquitos</b> — a Manchester-based restaurant — by improving engagement, online bookings, and digital branding.</p>
+<div class="restaurant-gallery">
+<img src="https://images.unsplash.com/photo-1555992336-cbf7f9f3fbb7?q=80&w=2070&auto=format&fit=crop" alt="Restaurant 1">
+<img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=2070&auto=format&fit=crop" alt="Restaurant 2">
+<img src="https://images.unsplash.com/photo-1600891963932-7e6096b7a9e3?q=80&w=2070&auto=format&fit=crop" alt="Restaurant 3">
+</div>
+<div class="menu"><h3>🌮 Menu Highlights</h3>
+<div class="menu-item"><b>Fajita Fiesta</b> — £12.99<br>Grilled chicken, peppers, onions, and tortillas.</div>
+<div class="menu-item"><b>Taco Trio</b> — £10.99<br>Soft tacos with beef, chicken, and veggies.</div>
+<div class="menu-item"><b>Churros & Chocolate</b> — £6.50<br>Classic Spanish dessert with rich dipping sauce.</div>
+</div>
+<div class="booking-form">
+<h3>🗓️ Book a Table</h3>
+<form><input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email" required>
+<input type="number" placeholder="Guests" min="1" required>
+<input type="datetime-local" required>
+<textarea placeholder="Special Requests"></textarea>
+<button type="submit" class="btn" style="width:100%;">Book Now</button></form>
+</div>
+<div class="map">
+<h3>📍 Find Us</h3>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.004169727404!2d-2.246446384210452!3d53.48075927999811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487a4c7e7b0e1b6f%3A0x8f7d9c6e3b5e4c0!2sManchester!5e0!3m2!1sen!2suk!4v1633519114227!5m2!1sen!2suk" allowfullscreen="" loading="lazy"></iframe>
+</div>
+<div class="logo-animation"><img src="https://upload.wikimedia.org/wikipedia/en/e/e5/Chiquito_logo.png" width="100" alt="Chiquitos Logo"></div>
+</section>`,
+    contact:`<section id="contact-section">
+<h2>📬 Contact Me</h2>
+<p>Reach out via email or send me a message directly from this page!</p>
+<div class="contact-container slide-in">
+
+<div class="contact-item">
+<div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:center;">
+<span id="emailText"><b>✉️</b> e.johnson20@edu.salford.ac.uk</span>
+<button id="copyEmailBtn" class="btn">Copy Email</button>
+<a href="mailto:e.johnson20@edu.salford.ac.uk" class="btn">Send Email</a>
+<span id="copyFeedback" style="color:green; display:none;">Copied!</span>
+</div>
+</div>
+
+<div class="contact-item booking-form">
+<h3>✍️ Send a Message</h3>
+<form id="contactForm">
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message" required></textarea>
+<button type="submit" class="btn" style="width:100%;">Send Message</button>
+</form>
+<p id="formFeedback" style="color:green; display:none; margin-top:10px;">Thank you! Your message has been sent.</p>
+</div>
+
+<div class="contact-item social-links">
+<a href="https://www.linkedin.com/in/emmanuel-johnson-8259b92b1" target="_blank" class="btn">🔗 LinkedIn</a>
+<a href="https://github.com/EmmanuelJJ01" target="_blank" class="btn">🐱 GitHub</a>
+<a href="https://www.instagram.com/emmanueljohnson._" target="_blank" class="btn">📸 Instagram</a>
+</div>
+
+</div>
+</section>
